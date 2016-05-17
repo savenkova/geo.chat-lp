@@ -26,6 +26,11 @@ p {
     line-height: 120%;
 }
 
+.fixed {
+    position: fixed;
+    display: block;
+}
+
 .section {
     position: relative;
     width: 100%;
@@ -71,7 +76,6 @@ p {
         width: 65%;
     }
 .m-btn-box.inline-btn {
-    display: none;
     width: 100%;
 }
     .inline-btn .download-btn {
@@ -80,8 +84,6 @@ p {
     }
 
 .xs-btn-box {
-    display: block;
-    position: fixed;
     bottom: 0;
     right: 0;
     width: 98%;
@@ -153,7 +155,9 @@ p {
         .download-btn img {
             width: 100%;
         }
-
+.m-btn-box.desktop {
+    display: none;
+}
 
 /*map section*/
 
@@ -273,7 +277,7 @@ p {
 
 /* Larger than tablet */
 @media (min-width: 700px) {
-    .m-btn-box.inline-btn {
+    .m-btn-box.desktop {
         display: block;
     }
     .map .message, .connection .message {
@@ -290,7 +294,7 @@ p {
         font-size: 2rem;
     }
     .map .message, .connection .message {
-        padding-top: 10rem;
+        padding-top: 5rem;
     }
 }
 

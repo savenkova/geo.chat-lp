@@ -24,7 +24,7 @@
 
                     <p>Весь город у тебя на ладони</p>
                 </div>
-                <div class="m-btn-box">
+                <div id="topBtn" class="m-btn-box inline-btn">
                     <a class="download-btn app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
                         <img src="img/appst-btn.png" alt="App Store"/>
                     </a>
@@ -41,16 +41,16 @@
         </div>
         <div class="bg-bottom"></div>
     </div>
-    <div class="section map sticky">
+    <div class="section map">
         <div class="container">
             <div class="one-half  column message">
                 <h2>Создай свой чат, и все в округе узнают о нем</h2>
                 <p>Например, можешь  спросить, где лучшее кафе или порадоваться салюту на площади</p>
-                <div class="m-btn-box inline-btn">
-                    <a class="download-btn-m app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
+                <div class="m-btn-box inline-btn desktop">
+                    <a class="download-btn app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
                         <img src="img/appst-btn.png" alt="App Store"/>
                     </a>
-                    <a class="download-btn-m google-play" href="https://play.google.com/store/apps/details?id=geo.chat">
+                    <a class="download-btn google-play" href="https://play.google.com/store/apps/details?id=geo.chat">
                         <img src="img/gpl-btn.png" alt="Google Play"/>
                     </a>
                 </div>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="section events sticky">
+    <div class="section events">
         <div class="container">
 
             <div class="message">
@@ -82,17 +82,17 @@
             </div>
         </div>
     </div>
-    <div class="section connection sticky">
+    <div class="section connection">
         <div class="container">
 
             <div class="one-half column message">
                 <h2>Поделись информацией</h2>
                 <p>Ответь участникам чата, посоветуй любимое заведение или расскажи, чем собираешься заняться сам</p>
-                <div class="m-btn-box inline-btn">
-                    <a class="download-btn-m app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
+                <div class="m-btn-box inline-btn desktop">
+                    <a class="download-btn app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
                         <img src="img/appst-btn.png" alt="App Store"/>
                     </a>
-                    <a class="download-btn-m google-play" href="https://play.google.com/store/apps/details?id=geo.chat">
+                    <a class="download-btn google-play" href="https://play.google.com/store/apps/details?id=geo.chat">
                         <img src="img/gpl-btn.png" alt="Google Play"/>
                     </a>
                 </div>
@@ -102,7 +102,7 @@
             </div>
         </div>
     </div>
-    <div class="xs-btn-box inline-btn">
+    <div id="btnBoxFixed" class="xs-btn-box inline-btn">
         <a class="download-btn app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
             <img src="img/appst-btn.png" alt="App Store"/>
         </a>
@@ -111,5 +111,20 @@
         </a>
     </div>
 </main>
+<script>
+    var topBtnElem = document.getElementById('topBtn'),
+        btnSourceBottom = topBtnElem.getBoundingClientRect().bottom + window.pageYOffset,
+        btnBoxFixed = document.getElementById('btnBoxFixed');
+
+    console.log(btnSourceBottom, topBtnElem, btnBoxFixed);
+
+    window.onscroll = function() {
+        if (btnBoxFixed.classList.contains('fixed') && window.pageYOffset < btnSourceBottom) {
+            btnBoxFixed.classList.remove('fixed');
+        } else if (window.pageYOffset > btnSourceBottom) {
+            btnBoxFixed.classList.add('fixed');
+        }
+    };
+</script>
 </body>
 </html>
