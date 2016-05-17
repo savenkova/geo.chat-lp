@@ -35,7 +35,7 @@ p {
 .container {
     position: relative;
     width: 100%;
-    max-width: 1240px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 10px;
     box-sizing: border-box;
@@ -74,9 +74,9 @@ p {
     display: none;
     width: 100%;
 }
-    .m-btn-box.inline-btn .download-btn-m {
+    .inline-btn .download-btn {
         width: 45%;
-        margin: 5% auto 0;
+        margin: 0 auto;
     }
 
 .xs-btn-box {
@@ -84,28 +84,22 @@ p {
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 100%;
-    text-align: right;
+    width: 98%;
     padding: 2% 1%;
-    background: rgba(255, 255, 255, .9);
+    font-size: 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .7), rgba(255, 255, 255, 1));
     z-index: 5;
 }
     .xs-btn-box a {
         display: inline-block;
-        width: 15%;
     }
-    .xs-btn-box img {
-        width: 100%;
-    }   
-    .xs-btn-box .note {
-        position: absolute;
-        right: 33%;
-        bottom: 28%;
-        width: 25%;
-        font-size: 1.2rem;
-        font-weight: bolder;
-        text-transform: uppercase;
+    .xs-btn-box .download-btn.app-store {
+        margin-right: 2%;
     }
+    
+.download-btn img {
+    width: 100%;
+}
 
 .bg-bottom {
     position: absolute;
@@ -151,12 +145,12 @@ p {
     margin: 0 auto;
 }
 
-    .download-btn-m {
+    .download-btn {
         display: inline-block;
         width: 100%;
         margin: 0 auto;
     } 
-        .download-btn-m img {
+        .download-btn img {
             width: 100%;
         }
 
@@ -197,6 +191,10 @@ p {
 
 /*connection section*/
 
+.section.connection {
+    padding-bottom: 15%;
+}
+
 
 .phones {
     position: relative;
@@ -214,14 +212,14 @@ p {
 @media (min-width: 400px) {
     .container {
         width: 85%;  }
-    .xs-btn-box .note {
-        bottom: 33%;
-    }
 }
 
 @media (min-width: 479px) {
     .xs-btn-box {
         display: none;
+    }
+    .section.connection {
+        padding-bottom: 5%;
     }
 }
 
