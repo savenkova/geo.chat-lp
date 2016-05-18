@@ -1,18 +1,24 @@
 html {
-    font-size: 62.5%; }
+    font-size: 62.5%;
+}
 
 body {
     font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
     line-height: 1.6;
     font-weight: 400;
     font-family: 'Open Sans', 'Arial', sans-serif;
-    color: #082024; }
+    color: #082024;
+}
 
 h2 {
     margin: 0;
-    font-weight: 500; }
+    font-weight: 500;
+}
 
-h2 { font-size: 2rem; line-height: 1.25; }
+h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+}
 
 html, body {
     text-align: center;
@@ -23,7 +29,7 @@ a {
 }
 
 p {
-    line-height: 120%;
+    line-height: 130%;
 }
 
 .fixed {
@@ -56,32 +62,38 @@ p {
 .columns {
     width: 100%;
     float: left;
-    box-sizing: border-box; }
-.four.columns { width: 33.33333333%; }
+    box-sizing: border-box;
+}
+
+.four.columns {
+    width: 33.33333333%;
+}
 
 .message {
     padding: 2rem 0;
 }
 
-    .message p {
-        opacity: .6;
-    }
+.message p {
+    opacity: .6;
+}
 
 .phone {
     width: 80%;
     z-index: 2;
 }
 
-    .phone.single {
-        width: 65%;
-    }
+.phone.single {
+    width: 65%;
+}
+
 .m-btn-box.inline-btn {
     width: 100%;
 }
-    .inline-btn .download-btn {
-        width: 45%;
-        margin: 0 auto;
-    }
+
+.inline-btn .download-btn {
+    width: 45%;
+    margin: 0 auto;
+}
 
 .xs-btn-box {
     bottom: 0;
@@ -92,13 +104,15 @@ p {
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, .7), rgba(255, 255, 255, 1));
     z-index: 5;
 }
-    .xs-btn-box a {
-        display: inline-block;
-    }
-    .xs-btn-box .download-btn.app-store {
-        margin-right: 2%;
-    }
-    
+
+.xs-btn-box a {
+    display: inline-block;
+}
+
+.xs-btn-box .download-btn.app-store {
+    margin-right: 2%;
+}
+
 .download-btn img {
     width: 100%;
 }
@@ -113,7 +127,6 @@ p {
     z-index: 1;
 }
 
-
 /*intro section*/
 
 .section.intro {
@@ -123,38 +136,40 @@ p {
     background-size: cover;
 }
 
-    .intro p {
-        font-size: 1.5rem;
-        margin: 0;
-    }
+.intro p {
+    font-size: 1.5rem;
+    margin: 0;
+}
 
-    .intro .bg-bottom {
-        height: 15%;
-    }
+.intro .bg-bottom {
+    height: 15%;
+}
 
 .logo {
     width: 65%;
     margin: 0 auto;
 }
 
-    .logo img {
-        display: block;
-        width: 100%;
-    }
+.logo img {
+    display: block;
+    width: 100%;
+}
 
 .m-btn-box {
     width: 50%;
     margin: 0 auto;
 }
 
-    .download-btn {
-        display: inline-block;
-        width: 100%;
-        margin: 0 auto;
-    } 
-        .download-btn img {
-            width: 100%;
-        }
+.download-btn {
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.download-btn img {
+    width: 100%;
+}
+
 .m-btn-box.desktop {
     display: none;
 }
@@ -167,7 +182,8 @@ p {
 
 /*events section*/
 
-.events {
+.section.events {
+    padding-bottom: 0;
     text-align: center;
     background: #f2f2f2;
 }
@@ -177,6 +193,7 @@ p {
     width: 36%;
     z-index: 2;
 }
+
 .events .phone:nth-child(2) {
     width: 39%;
     margin: -1% -8% 0;
@@ -185,11 +202,13 @@ p {
 
 .events .bg-bottom {
     display: block;
-    padding: 2.5rem 0;
+    height: 7.5rem;
     z-index: 5;
     box-shadow: 0 -3px 10px 0 rgba(0, 0, 0, .1);
 }
+
 .events .bg-bottom .four.columns {
+    padding-top: 1.5rem;
     text-align: center;
 }
 
@@ -198,7 +217,6 @@ p {
 .section.connection {
     padding-bottom: 15%;
 }
-
 
 .phones {
     position: relative;
@@ -211,17 +229,18 @@ p {
     max-width: 90%;
 }
 
-
 /* For devices larger than 400px */
 @media (min-width: 400px) {
     .container {
-        width: 85%;  }
+        width: 85%;
+    }
 }
 
 @media (min-width: 479px) {
     .xs-btn-box {
         display: none;
     }
+
     .section.connection {
         padding-bottom: 5%;
     }
@@ -230,18 +249,22 @@ p {
 /* For devices larger than 550px */
 @media (min-width: 550px) {
     .container {
-        width: 80%;  }
+        width: 80%;
+    }
+
     .column,
     .columns {
-        margin-left: 4%; }
+        margin-left: 4%;
+    }
+
     .column:first-child,
     .columns:first-child {
-        margin-left: 0; }
+        margin-left: 0;
+    }
 
-    .one-third.column               { width: 30.6666666667%; }
-    .two-thirds.column              { width: 65.3333333333%; }
-
-    .one-half.column                { width: 48%; }
+    .one-half.column {
+        width: 48%;
+    }
 
     h2 {
         font-size: 2.25rem;
@@ -250,26 +273,34 @@ p {
     .intro .message, .logo, .m-btn-box {
         margin: 0;
     }
+
     .one-half.column.message {
         text-align: left;
     }
+
     .preview {
         text-align: center;
     }
 
+    .m-btn-box.desktop {
+        display: block;
+    }
 
     /*events section*/
-
     .section.events .phone {
         width: 30%;
     }
+
     .section.events .phone:nth-child(2) {
         width: 32%;
-        margin: 0 3%;}
+        margin: 0 3%;
+    }
+
     .four.columns {
         margin: 0;
         padding: 3rem 0;
     }
+
     .events .bg-bottom {
         font-size: 1.75rem;
     }
@@ -277,9 +308,6 @@ p {
 
 /* Larger than tablet */
 @media (min-width: 700px) {
-    .m-btn-box.desktop {
-        display: block;
-    }
     .map .message, .connection .message {
         padding-top: 5rem;
     }
@@ -290,9 +318,12 @@ p {
     .phone.single {
         width: 60%;
     }
+
     .events .bg-bottom {
+        height: 10rem;
         font-size: 2rem;
     }
+
     .map .message, .connection .message {
         padding-top: 5rem;
     }

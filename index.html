@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>GeoChat</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link href="..." rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css"/>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -22,7 +20,7 @@
                 <div class="message">
                     <h2>Чат — там, где ты</h2>
 
-                    <p>Весь город у тебя на ладони</p>
+                    <p>Весь город у&nbsp;тебя на&nbsp;ладони</p>
                 </div>
                 <div id="topBtn" class="m-btn-box inline-btn">
                     <a class="download-btn app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
@@ -44,8 +42,8 @@
     <div class="section map">
         <div class="container">
             <div class="one-half  column message">
-                <h2>Создай свой чат, и все в округе узнают о нем</h2>
-                <p>Например, можешь  спросить, где лучшее кафе или порадоваться салюту на площади</p>
+                <h2>Создай свой чат, и&nbsp;все&nbsp;в&nbsp;округе узнают о&nbsp;нем</h2>
+                <p>Например, можешь  спросить, где&nbsp;лучшее кафе или порадоваться салюту на&nbsp;площади</p>
                 <div class="m-btn-box inline-btn desktop">
                     <a class="download-btn app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
                         <img src="img/appst-btn.png" alt="App Store"/>
@@ -55,7 +53,7 @@
                     </a>
                 </div>
             </div>
-            <div class="one-half  column preview">
+            <div class="one-half column preview">
                 <img class="phone single" src="img/iphone-map.png" alt="iphone"/>
             </div>
         </div>
@@ -64,9 +62,9 @@
         <div class="container">
 
             <div class="message">
-                <h2>Узнай, что происходит вокруг</h2>
+                <h2>Узнай, что&nbsp;происходит вокруг</h2>
 
-                <p>Находи чаты на карте. Выбирай инресное поблизости или найди нужное место</p>
+                <p>Находи чаты на&nbsp;карте. Выбери интересное поблизости или&nbsp;найди нужное место</p>
             </div>
             <div class="phones-row">
                 <img class="phone" src="img/iphone-event.png" alt="iphone"/>
@@ -87,7 +85,7 @@
 
             <div class="one-half column message">
                 <h2>Поделись информацией</h2>
-                <p>Ответь участникам чата, посоветуй любимое заведение или расскажи, чем собираешься заняться сам</p>
+                <p>Ответь участникам чата, посоветуй любимое заведение или&nbsp;расскажи, чем&nbsp;собираешься заняться сам</p>
                 <div class="m-btn-box inline-btn desktop">
                     <a class="download-btn app-store" href="https://itunes.apple.com/ru/app/geo.chat/id1105327185">
                         <img src="img/appst-btn.png" alt="App Store"/>
@@ -115,9 +113,6 @@
     var topBtnElem = document.getElementById('topBtn'),
         btnSourceBottom = topBtnElem.getBoundingClientRect().bottom + window.pageYOffset,
         btnBoxFixed = document.getElementById('btnBoxFixed');
-
-    console.log(btnSourceBottom, topBtnElem, btnBoxFixed);
-
     window.onscroll = function() {
         if (btnBoxFixed.classList.contains('fixed') && window.pageYOffset < btnSourceBottom) {
             btnBoxFixed.classList.remove('fixed');
